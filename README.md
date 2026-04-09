@@ -1,6 +1,6 @@
 # agentseal-mcp
 
-MCP server for [AgentSeal](https://agentseal.io) - tamper-proof cryptographic audit trails for AI agents.
+MCP server for [AgentSeal](https://agentseal.io). Unalterable cryptographic audit trails for AI agents.
 
 Record everything your agent does with unalterable cryptographic proof.
 
