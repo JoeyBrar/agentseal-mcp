@@ -1,12 +1,8 @@
 {
   "name": "agentseal-mcp",
   "display_name": "AgentSeal",
-  "description": "Verifiable action logs for AI agents. Every action is recorded in a SHA-256 hash chain — prove to clients that your agent did what it said it did.",
+  "description": "Verifiable action logs for AI agents. Every action is recorded in a SHA-256 hash chain. Prove to clients that your agent did what it said it did.",
   "repository": "https://github.com/JoeyBrar/agentseal-mcp",
   "homepage": "https://agentseal.io",
-  "tags": ["security", "audit", "compliance", "logging", "ai-agents", "observability"],
-  "related_servers": [
-    "langfuse/langfuse-mcp-server",
-    "highlight/highlight-mcp"
-  ]
+  "tags": ["security", "audit", "compliance", "logging", "ai-agents", "observability"]
 }
