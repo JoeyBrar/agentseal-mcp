@@ -100,6 +100,22 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
         },
       },
     },
+    {
+      name: "verify_chain",
+      description:
+        "Verify the integrity of the audit trail hash chain. " +
+        "Each entry's SHA-256 hash includes the previous entry's hash — " +
+        "if any record was modified, the chain breaks and this will report where.",
+      inputSchema: {
+        type: "object",
+        properties: {
+          agent_id: {
+            type: "string",
+            description: "Verify chain for a specific agent only. If omitted, verifies all entries.",
+          },
+        },
+      },
+    },
   ],
 }));
 
@@ -153,6 +169,31 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
       return {
         content: [{ type: "text", text: `Found ${entries.length} entries:\n\n${summary}` }],
+      };
+    }
+
+    if (name === "verify_chain") {
+      const body = args.agent_id ? { agent_id: args.agent_id } : {};
+      const result = await apiCall("POST", "/v1/verify", body);
+
+      if (result.valid) {
+        return {
+          content: [
+            {
+              type: "text",
+              text: `Chain intact. ${result.entries_verified} entries verified, no tampering detected.`,
+            },
+          ],
+        };
+      }
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Chain broken at sequence ${result.broken_at_sequence}. Reason: ${result.reason}`,
+          },
+        ],
       };
     }
 
