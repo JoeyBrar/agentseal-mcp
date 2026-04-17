@@ -1,8 +1,4 @@
 {
-  "name": "agentseal-mcp",
-  "display_name": "AgentSeal",
-  "description": "Verifiable action logs for AI agents. Every action is recorded in a SHA-256 hash chain. Prove to clients that your agent did what it said it did.",
-  "repository": "https://github.com/JoeyBrar/agentseal-mcp",
-  "homepage": "https://agentseal.io",
-  "tags": ["security", "audit", "compliance", "logging", "ai-agents", "observability"]
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": ["JoeyBrar"]
 }
