@@ -1,14 +1,24 @@
 {
   "name": "agentseal-mcp",
-  "version": "0.1.0",
+  "version": "0.2.1",
+  "mcpName": "io.github.JoeyBrar/agentseal",
   "type": "module",
   "description": "MCP server for AgentSeal — tamper-proof audit trails for AI agents",
   "main": "index.js",
   "bin": {
     "agentseal-mcp": "./index.js"
   },
-  "files": ["index.js"],
-  "keywords": ["mcp", "ai", "agents", "audit-trail", "compliance", "security"],
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "mcp",
+    "ai",
+    "agents",
+    "audit-trail",
+    "compliance",
+    "security"
+  ],
   "author": "JoeyBrar",
   "license": "MIT",
   "repository": {
