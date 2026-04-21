@@ -2,7 +2,7 @@
 
 [![agentseal-mcp MCP server](https://glama.ai/mcp/servers/JoeyBrar/agentseal-mcp/badges/card.svg)](https://glama.ai/mcp/servers/JoeyBrar/agentseal-mcp)
 
-MCP server for [AgentSeal](https://agentseal.io). Verifiable action logs for AI agents, using SHA-256 hash chains.
+MCP server for [AgentSeal](https://agentseal.io). Tamper-proof audit logs for AI agents, using SHA-256 hash chains.
 
 Every agent action is recorded in a hash chain. With this, you can actually prove to your clients that your agent did what it said it did.
 
